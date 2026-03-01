@@ -56,3 +56,8 @@ dependencies = [
     "kokoro>=0.9.4",
     "openai-whisper>=20250625",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.1.0",
+]

@@ -2853,6 +2853,11 @@ dependencies = [
     { name = "xgboost" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "ipykernel" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "anthropic", specifier = ">=0.69.0" },
@@ -2908,6 +2913,9 @@ requires-dist = [
     { name = "wandb", specifier = ">=0.22.1" },
     { name = "xgboost", specifier = ">=3.1.1" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ipykernel", specifier = ">=7.1.0" }]
 
 [[package]]
 name = "llvmlite"

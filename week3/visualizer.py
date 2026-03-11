@@ -6,11 +6,16 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
-
+OPENAI_API_KEY = "http://localhost:11434/v1"
+model_name = "gemma3:270m"
 
 class TokenPredictor:
-    def __init__(self, model_name: str):
-        self.client = OpenAI()
+    def __init__(self, model_name: str): # Fixed type hint from model_name to str
+        # 2. Assign the URL to base_url and a placeholder to api_key
+        self.client = OpenAI(
+            base_url=OPENAI_API_KEY, 
+            api_key="ollama" 
+        )
         self.messages = []
         self.predictions = []
         self.model_name = model_name
